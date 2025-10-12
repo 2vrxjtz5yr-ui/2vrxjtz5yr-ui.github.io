@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Pasta Recipes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8dcc8 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #6d3510 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-style: italic;
+        }
+        
+        .book-info {
+            background: #f9f4ef;
+            padding: 30px 40px;
+            border-bottom: 1px solid #e0d5c7;
+        }
+        
+        .book-info img {
+            max-width: 200px;
+            height: auto;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .book-info h2 {
+            color: #8B4513;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .book-info p {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.1em;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .recipes {
+            padding: 40px;
+        }
+        
+        .recipes h2 {
+            color: #8B4513;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 15px;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .recipe-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #8B4513;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.2);
+            background: white;
+        }
+        
+        .recipe-card h3 {
+            color: #8B4513;
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .recipe-meta {
+            color: #777;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        
+        .recipe-meta strong {
+            color: #555;
+        }
+        
+        .recipe-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-top: 12px;
+            font-style: italic;
+        }
+        
+        .footer {
+            background: #f9f4ef;
+            padding: 30px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0d5c7;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .book-info img {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
+            }
+            
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍝 Mastering Pasta</h1>
+            <p>The Art and Practice of Handmade Pasta, Gnocchi, and Risotto</p>
+        </div>
+        
+        <div class="book-info clearfix">
+            <img src="https://2vrxjtz5yr-ui.github.io/IMG_7689.JPG" alt="Mastering Pasta cookbook cover">
+            <h2>About This Collection</h2>
+            <p>Welcome to this collection of recipes from Marc Vetri's <em>Mastering Pasta</em>. Each recipe has been formatted for easy import into AnyList and includes complete ingredients, step-by-step instructions, cooking times, and the book cover image.</p>
+            <p>Click on any recipe below to view the full recipe page, which you can then import directly into your recipe management app.</p>
+        </div>
+        
+        <div class="recipes">
+            <h2>Recipe Collection</h2>
+            
+            <div class="recipe-grid">
+                <a href="corzetti-recipe-5.html" class="recipe-card">
+                    <h3>Corzetti with Red Bell Pepper Crema</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4-6</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 1 hour 45 minutes</div>
+                    <p class="recipe-description">Stamped pasta medallions served with a creamy roasted red pepper sauce and fior di capra cheese.</p>
+                </a>
+                
+                <a href="recipe-02-pappardelle.html" class="recipe-card">
+                    <h3>Pappardelle with Rabbit Ragù and Peaches</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 2 hours 30 minutes</div>
+                    <p class="recipe-description">Wide ribbon pasta with tender braised rabbit and fresh peaches for a sweet-savory combination.</p>
+                </a>
+                
+                <a href="recipe-03-maltagliati.html" class="recipe-card">
+                    <h3>Maltagliati all'Arrabbiata</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 35 minutes</div>
+                    <p class="recipe-description">"Badly cut" pasta scraps in a spicy tomato sauce with garlic, red pepper flakes, and parsley.</p>
+                </a>
+                
+                <a href="recipe-04-garganelli.html" class="recipe-card">
+                    <h3>Garganelli alla Carbonara</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4-6</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 40 minutes</div>
+                    <p class="recipe-description">Ridged pasta tubes with a rich, creamy egg and pancetta sauce—the ultimate comfort food.</p>
+                </a>
+                
+                <a href="recipe-05-fettuccine.html" class="recipe-card">
+                    <h3>Fettuccine with Corn Crema and Charred Green Onions</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4-6</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 45 minutes</div>
+                    <p class="recipe-description">Fresh summer corn puree with charred green onions creates a vibrant, sweet-savory pasta.</p>
+                </a>
+                
+                <a href="recipe-06-tagliatelle.html" class="recipe-card">
+                    <h3>Tagliatelle with Traditional Bolognese</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 2 hours</div>
+                    <p class="recipe-description">Classic Bologna-style meat sauce with beef, veal, and milk, served over ribbon pasta.</p>
+                </a>
+                
+                <a href="recipe-07-farfalle.html" class="recipe-card">
+                    <h3>Farfalle with Chorizo and Favas</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 55 minutes</div>
+                    <p class="recipe-description">Butterfly-shaped pasta with Spanish chorizo, fava beans, and aged Pantaleo cheese.</p>
+                </a>
+                
+                <a href="recipe-08-fazzoletti.html" class="recipe-card">
+                    <h3>Fazzoletti with Crab and Burrata</h3>
+                    <div class="recipe-meta"><strong>Serves:</strong> 4</div>
+                    <div class="recipe-meta"><strong>Time:</strong> 40 minutes</div>
+                    <p class="recipe-description">Delicate pasta squares with jumbo lump crab and creamy burrata—elegant and luxurious.</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Source:</strong> <em>Mastering Pasta: The Art and Practice of Handmade Pasta, Gnocchi, and Risotto</em></p>
+            <p>by Marc Vetri with David Joachim</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">All recipes formatted for AnyList import with schema.org markup</p>
+        </div>
+    </div>
+</body>
+</html>
