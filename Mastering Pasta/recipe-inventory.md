@@ -4,9 +4,9 @@
 
 ## Progress Statistics
 - **Total recipes:** 118
-- **Completed:** 82
-- **Missing:** 36
-- **Progress:** 68%
+- **Completed:** 88
+- **Missing:** 30
+- **Progress:** 71%
 
 ---
 
@@ -119,21 +119,21 @@
 - [x] Testarolo Batter (p.177) - *Base recipe*
 
 ### Recipes
-- [ ] Loriguittas with Seafood (p.179)
+- [x] Loriguittas with Seafood (p.179)
 - [x] Pici Aglio e Olio (p.181)
 - [x] Pagliata with Sweetbreads (p.183)
 - [x] Cavatelli alla Norma (p.186)
-- [ ] Dove Pasta with Quail Meatballs (p.188)
-- [ ] Chitarra with Veal Shin Ragù (p.191)
+- [x] Dove Pasta with Quail Meatballs (p.188)
+- [x] Chitarra with Veal Shin Ragù (p.191)
 - [x] Orecchiette with Pig's Head Ragù and Black Walnuts (p.194)
-- [ ] Testarolo with Pistachio Pesto (p.197)
-- [ ] Strozzapreti with Green Tomatoes and Razor Clams (p.199)
+- [x] Testarolo with Pistachio Pesto (p.197)
+- [x] Strozzapreti with Green Tomatoes and Razor Clams (p.199)
 
 ---
 
 ## Section 9 - GNOCCHI
 
-- [ ] Potato Gnocchi with Corn Crema and Corn Salad (p.206)
+- [x] Potato Gnocchi with Corn Crema and Corn Salad (p.206)
 - [x] Chestnut Gnocchi with Porcini Ragù (p.209)
 - [ ] Squash Gnocchi with Brown Butter and Crispy Sage (p.211)
 - [x] Baccalà Gnocchi with Squid (p.213)
