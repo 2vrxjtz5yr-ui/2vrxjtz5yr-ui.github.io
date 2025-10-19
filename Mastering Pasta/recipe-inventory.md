@@ -4,8 +4,8 @@
 
 ## Progress Statistics
 - **Total recipes:** 118
-- **Completed:** 81
-- **Missing:** 37
+- **Completed:** 82
+- **Missing:** 36
 - **Progress:** 68%
 
 ---
@@ -121,7 +121,7 @@
 ### Recipes
 - [ ] Loriguittas with Seafood (p.179)
 - [x] Pici Aglio e Olio (p.181)
-- [ ] Pagliata with Sweetbreads (p.183)
+- [x] Pagliata with Sweetbreads (p.183)
 - [x] Cavatelli alla Norma (p.186)
 - [ ] Dove Pasta with Quail Meatballs (p.188)
 - [ ] Chitarra with Veal Shin Ragù (p.191)
