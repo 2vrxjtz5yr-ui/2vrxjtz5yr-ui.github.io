@@ -131,9 +131,10 @@ This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri 
     <li>ingredient 2</li>
 </ul>
 
-<h2 itemprop="recipeInstructions">Instructions</h2>
+<h2>Instructions</h2>
 <ol>
     <li>step 1</li>
+    <li>step 2</li>
 </ol>
 ```
 
@@ -148,8 +149,13 @@ This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri 
 <h2>Instructions</h2>
 <ol>
     <li itemprop="recipeInstructions">step 1</li>
+    <li itemprop="recipeInstructions">step 2</li>
 </ol>
 ```
+
+**FORMATTING REMINDER:**
+- Keep instruction steps as separate `<li>` items - don't combine multiple steps
+- Include blank lines between `<li>` tags for readability in the HTML source
 
 #### Save the File
 - **Tool to use:** `Filesystem:write_file` (NOT create_file)

@@ -4,9 +4,9 @@
 
 ## Progress Statistics
 - **Total recipes:** 118
-- **Completed:** 88
-- **Missing:** 30
-- **Progress:** 71%
+- **Completed:** 96
+- **Missing:** 22
+- **Progress:** 79%
 
 ---
 
@@ -135,22 +135,22 @@
 
 - [x] Potato Gnocchi with Corn Crema and Corn Salad (p.206)
 - [x] Chestnut Gnocchi with Porcini Ragù (p.209)
-- [ ] Squash Gnocchi with Brown Butter and Crispy Sage (p.211)
+- [x] Squash Gnocchi with Brown Butter and Crispy Sage (p.211)
 - [x] Baccalà Gnocchi with Squid (p.213)
-- [ ] Swiss Chard Gnocchi with Brown Butter and Parmesan (p.215)
+- [x] Swiss Chard Gnocchi with Brown Butter and Parmesan (p.215)
 - [x] Cabbage Gnocchi with Sausage and Toasted Bread Crumbs (p.216)
 - [x] Goat Cheese Gnocchi with Prosciutto Crisps (p.218)
-- [ ] Traditional Semolina Gnocchi (p.219)
+- [x] Traditional Semolina Gnocchi (p.219)
 
 ---
 
 ## Section 10 - RISOTTO
 
-- [ ] Tomato Risotto (p.227)
-- [ ] Risotto alla Milanese (p.228)
-- [ ] Shellfish Risotto (p.231)
-- [ ] Crab and Sorrel Risotto (p.232)
-- [ ] Bluefoot Mushroom Risotto with Castelmagno Cheese (p.233)
+- [x] Tomato Risotto (p.227)
+- [x] Risotto alla Milanese (p.228)
+- [x] Shellfish Risotto (p.231)
+- [x] Crab and Sorrel Risotto (p.232)
+- [x] Bluefoot Mushroom Risotto with Castelmagno Cheese (p.233)
 - [x] Squid Ink Risotto with Seppia Salad and Ricotta (p.234)
 - [ ] Duck Risotto with Orange Sauce (p.236)
 
