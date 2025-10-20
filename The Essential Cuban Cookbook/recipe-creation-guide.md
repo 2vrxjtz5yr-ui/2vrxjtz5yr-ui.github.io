@@ -1,7 +1,7 @@
-# MASTERING PASTA RECIPE HTML CREATION - COMPLETE GUIDE
+# THE ESSENTIAL CUBAN COOKBOOK - RECIPE HTML CREATION GUIDE
 
 ## PROJECT OVERVIEW
-This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri into HTML files that can be imported into recipe management software. The HTML files must use proper Schema.org markup with itemprop attributes on individual list items (NOT parent elements) or the import will fail.
+This project converts recipes from "The Essential Cuban Cookbook" into HTML files that can be imported into recipe management software. The HTML files must use proper Schema.org markup with itemprop attributes on individual list items (NOT parent elements) or the import will fail.
 
 ## CRITICAL CONTEXT FROM TROUBLESHOOTING
 - **The `create_file` tool does NOT work** for this file system - always use `Filesystem:write_file`
@@ -13,13 +13,23 @@ This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri 
 
 ## FILE PATHS AND STRUCTURE
 
+**For complete project definitions and terminology, see:**
+`/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/project-definitions.md`
+
 **Critical paths to use:**
-- Recipe HTML files: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/[recipe-name].html`
-- Main index file: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/mastering-pasta.html`
-- Inventory file: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/recipe-inventory.md`
-- Cover image reference: `IMG_7689.JPG` (relative path in HTML)
+- Recipe HTML files: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/[recipe-name].html`
+- Main index file: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/essential-cuban-cookbook.html`
+- Inventory file: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/recipe-inventory.md`
+- Cover image reference: `IMG_7890.JPG` (relative path in HTML)
 
 **Always use these exact paths - do not check or verify, just use them directly.**
+
+**Definitions:**
+- **Recipe Folder** = `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/`
+- **Index** = `essential-cuban-cookbook.html` (the main recipe index)
+- **Master Index** = `index.html` (the collection of all cookbook indexes)
+- **Inventory** = `recipe-inventory.md` (tracks recipe completion status)
+- **GitHub Folder** = `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/`
 
 ---
 
@@ -31,7 +41,7 @@ This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri 
 
 **Before starting recipe creation:** Upload all cookbook page images to the Project's Knowledge base
 1. Go to Project Settings → Knowledge
-2. Upload the images from the local filesystem (e.g., `/Users/michelle/Documents/recipes/Mastering Pasta/images/`)
+2. Upload the images from the local filesystem (e.g., `/Users/michelle/Documents/recipes/The Essential Cuban Cookbook/images/`)
 3. Wait for upload to complete
 
 ### Accessing Recipes During Creation
@@ -39,11 +49,11 @@ This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri 
 **To read a recipe:**
 
 1. **Use the `project_knowledge_search` tool** with a query containing:
-   - Recipe name
+   - Recipe name (both Spanish and English if applicable)
    - Page number (if known)
    - Key ingredients or terms from the recipe
    
-   Example query: `"Pici Aglio e Olio page 181 garlic oil pasta"`
+   Example query: `"Tostadas Cubanas Cuban Toast page 4"`
 
 2. **The tool will return image results** showing pages from the cookbook
    - These images come from Project Knowledge (NOT the filesystem)
@@ -54,22 +64,23 @@ This project converts recipes from the "Mastering Pasta" cookbook by Marc Vetri 
 3. **Extract the recipe information** from the images:
    - Read the ingredient list with quantities
    - Read the step-by-step instructions
-   - Note any headnotes, descriptions, or chef's notes
-   - Look for "Pasta Swap" suggestions or variations
+   - Note any headnotes, descriptions, or cultural notes
+   - Look for "Variation Tip," "Ingredient Tip," or "Technique Tip" boxes
 
 **Example workflow:**
 
 ```
-User: "Make Pici Aglio e Olio"
+User: "Make Tostadas Cubanas"
 
-You: [calls project_knowledge_search with query "Pici Aglio e Olio page 181"]
+You: [calls project_knowledge_search with query "Tostadas Cubanas Cuban Toast page 4"]
 
 Tool returns: [Images from Project Knowledge showing cookbook pages with the recipe]
 
 You: [Read the images to extract:]
-- Title: Pici Aglio e Olio
-- Yield: Makes 4 servings
-- Ingredients: 1 pound fresh pici, 1/2 cup olive oil, etc.
+- Title: Tostadas Cubanas / Cuban Toast
+- Prep/Cook Time: if provided
+- Yield: Makes X servings
+- Ingredients: butter, Cuban bread, etc.
 - Instructions: Step 1, Step 2, Step 3...
 - Description: [Any intro text about the dish]
 
@@ -78,7 +89,7 @@ Then: [Create HTML file using this extracted information]
 
 ### Important Notes
 
-- **Claude CANNOT directly read image files from the filesystem** using paths like `/Users/michelle/Documents/recipes/Mastering Pasta/images/IMG_7820.JPG`
+- **Claude CANNOT directly read image files from the filesystem** using paths like `/Users/michelle/Documents/recipes/The Essential Cuban Cookbook/images/IMG_7920.JPG`
 - The images MUST be in Project Knowledge first
 - The `project_knowledge_search` tool is specifically designed to search the project's uploaded content
 - You CAN read text from images returned by the tool - they are photographs of cookbook pages with clearly readable text
@@ -98,29 +109,24 @@ If `project_knowledge_search` tool is not available in the conversation:
 
 **CRITICAL: All variations must be created as separate, standalone recipe files.**
 
-When a recipe includes variations (e.g., "Veal Stock" with variations for Beef Stock, Chicken Stock, Duck Stock, etc.):
+When a recipe includes variations (e.g., a base recipe with "Variation Tip" suggesting alternatives):
 
 1. **Create the base recipe first** with its full instructions
-2. **Create each variation as its own complete standalone recipe file**
-   - Use a descriptive filename: `beef-stock.html`, `chicken-stock.html`
+2. **Create each variation as its own complete standalone recipe file** if it's listed separately in the inventory
+   - Use a descriptive filename
    - Include complete ingredients and instructions (adapted from base recipe)
    - Explain what makes this variation different in the description
    
-**Why this matters:** Users searching for "Duck Stock" won't know to search for "Veal Stock" and read the variations. Each variation needs its own searchable file.
-
-**Example variations that need separate files:**
-- Stock variations (Beef, Chicken, Duck, Goose, Quail, Marrowbone from Veal Stock base)
-- Béchamel variations (with Onion, Truffle, Taleggio from Béchamel base)
-- Dough variations (if multiple flour types or flavor variations exist)
+**Why this matters:** Users searching for a specific variation won't know to search for the base recipe. Each variation that appears in the inventory needs its own searchable file.
 
 ---
 
 ## THE 4-STEP PROCESS
 
 ### STEP 1: Find the Next Recipe
-1. Read the inventory file: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/recipe-inventory.md`
+1. Read the inventory file: `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/recipe-inventory.md`
 2. Find the NEXT missing recipe (first one with `- [ ]` checkbox)
-3. Note the recipe name and page number
+3. Note the recipe name (both Spanish and English names) and page number
 
 ### STEP 2: Create the HTML File
 
@@ -129,9 +135,9 @@ When a recipe includes variations (e.g., "Veal Stock" with variations for Beef S
 #### Search for Recipe Content
 
 Use the `project_knowledge_search` tool to find the recipe:
-- Query with recipe name, page number, and key terms
+- Query with recipe name (Spanish and/or English), page number, and key terms
 - Read the returned images to extract all recipe details
-- Note ingredients, instructions, descriptions, and any variations
+- Note ingredients, instructions, descriptions, and any tips or variations
 
 #### Create HTML Using This EXACT Template
 
@@ -187,21 +193,22 @@ Use the `project_knowledge_search` tool to find the recipe:
 </head>
 <body>
     <article itemscope itemtype="http://schema.org/Recipe">
-        <img itemprop="image" src="IMG_7689.JPG" alt="Mastering Pasta cookbook cover" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+        <img itemprop="image" src="IMG_7890.JPG" alt="The Essential Cuban Cookbook cover" style="max-width: 100%; height: auto; margin-bottom: 20px;">
         
-        <h1 itemprop="name">[Recipe Name]</h1>
+        <h1 itemprop="name">[Spanish Name / English Name]</h1>
         
         <div class="recipe-meta">
             <span itemprop="recipeYield">[X] servings</span>
+            <!-- Include prep/cook time if provided in recipe -->
         </div>
 
         <div class="description" itemprop="description">
             <p>[Recipe description from cookbook]</p>
         </div>
 
-        <!-- OPTIONAL: Only include if there's a pasta swap note in the recipe -->
+        <!-- OPTIONAL: Only include if there's a variation, ingredient, or technique tip -->
         <div class="note">
-            <strong>Pasta Swap:</strong> [Pasta swap text if applicable]
+            <strong>Variation Tip:</strong> [Tip text if applicable]
         </div>
 
         <h2>Ingredients</h2>
@@ -221,7 +228,7 @@ Use the `project_knowledge_search` tool to find the recipe:
         </ol>
 
         <div class="note">
-            <p><strong>Source:</strong> Recipe from <em>Mastering Pasta: The Art and Practice of Handmade Pasta, Gnocchi, and Risotto</em> by Marc Vetri with David Joachim</p>
+            <p><strong>Source:</strong> Recipe from <em>The Essential Cuban Cookbook</em></p>
         </div>
     </article>
 </body>
@@ -266,8 +273,8 @@ Use the `project_knowledge_search` tool to find the recipe:
 
 #### Save the File
 - **Tool to use:** `Filesystem:write_file` (NOT create_file)
-- **File naming:** lowercase-with-hyphens.html (e.g., `pici-aglio-e-olio.html`)
-- **Save location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/`
+- **File naming:** lowercase-with-hyphens.html (e.g., `tostadas-cubanas.html`)
+- **Save location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/`
 
 ### STEP 3: Update the Inventory File
 
@@ -282,18 +289,19 @@ Use `Filesystem:edit_file` tool to make TWO edits:
 - Find the line `- **Missing:** XX`
 - Decrement by 1
 
-**Location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/recipe-inventory.md`
+**Location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/recipe-inventory.md`
 
 ### STEP 4: Update the Index File
 
 Use `Filesystem:edit_file` tool or rewrite the entire file to:
 - Add the new recipe link in **alphabetical order**
-- Format: `        <li><a href="Mastering Pasta/filename.html">Display Name</a></li>`
+- Format: `        <li><a href="The Essential Cuban Cookbook/filename.html">Display Name</a></li>`
 - Note: 8 spaces of indentation to match existing entries
+- Use the English name for the display text
 
 **When adding multiple recipes:** It's easier to read the entire index file and rewrite it with all recipes in correct alphabetical order rather than doing multiple string replacements.
 
-**Location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/mastering-pasta.html`
+**Location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/essential-cuban-cookbook.html`
 
 ---
 
@@ -310,20 +318,20 @@ When creating multiple recipes in one session:
 
 ---
 
-## MANAGING THE MASTER INDEX
+## MANAGING THE INDEX
 
-The master index (`mastering-pasta.html`) should be updated in alphabetical order.
+The index (`essential-cuban-cookbook.html`) should be updated in alphabetical order.
 
 **When adding multiple recipes:**
 1. Read the current index file
-2. Identify where each new recipe belongs alphabetically
+2. Identify where each new recipe belongs alphabetically (by English name)
 3. Rewrite the entire file with all recipes in correct alphabetical order
 4. Don't use string replacement - it's error-prone with multiple insertions
 
 **Alphabetization rules:**
-- Numbers come first (e.g., "3-2-1 Brine")
+- Use the English name for alphabetization
+- Numbers come first if any
 - Ignore articles (The, A, An) if present
-- "Béchamel with Onion" comes after "Béchamel"
 - Special characters: accents are alphabetized normally (é = e)
 
 ---
@@ -341,21 +349,19 @@ After finishing all 4 steps:
 
 ## IMPORTANT RULES
 
-1. **Do NOT skip ANY recipes** - Include base dough recipes, stocks, sauces, everything
+1. **Do NOT skip ANY recipes** - Include all recipes from the inventory
 2. **Follow inventory order exactly** - Do the NEXT unchecked item, not random ones
 3. **One recipe per completion OR batch of 5** - Never try to do too many recipes at once (causes crashes)
 4. **Always use Filesystem:write_file** - The create_file tool doesn't work for this
 5. **Read the inventory first** - Always start by reading the inventory to find the next recipe
 6. **Wait for confirmation** - After completing a recipe (or batch), wait for user to say "continue"
-7. **Create separate HTML files for ALL recipe variations** - Even if a recipe says "see base recipe for variations," create complete standalone files for each variation listed in the inventory
+7. **Create separate HTML files for ALL recipe variations** - If a variation is listed separately in the inventory
 8. **Images must be in Project Knowledge** - Cannot read images directly from filesystem paths
+9. **Use both Spanish and English names** - Include both names in the H1 title
 
 ---
 
 ## COMMON ISSUES TO AVOID
-
-❌ **Don't**: Create only the base recipe and mention variations in a note
-✅ **Do**: Create separate files for every variation
 
 ❌ **Don't**: Try to read images from filesystem paths like `/Users/michelle/Documents/recipes/...`
 ✅ **Do**: Use `project_knowledge_search` to access images from Project Knowledge
@@ -363,17 +369,17 @@ After finishing all 4 steps:
 ❌ **Don't**: Check if paths exist or verify file structure
 ✅ **Do**: Use the exact paths specified above confidently
 
-❌ **Don't**: Ask "Should I create separate files for variations?"
-✅ **Do**: Always create separate files for variations automatically
-
-❌ **Don't**: Use placeholder content like "See base recipe for details"
-✅ **Do**: Write complete, self-contained instructions for each variation
+❌ **Don't**: Use placeholder content
+✅ **Do**: Write complete instructions from the cookbook
 
 ❌ **Don't**: Put itemprop on `<ul>`, `<ol>`, or `<h2>` tags
 ✅ **Do**: Put itemprop on each individual `<li>` tag
 
 ❌ **Don't**: Use `create_file` tool
 ✅ **Do**: Use `Filesystem:write_file` tool
+
+❌ **Don't**: Alphabetize by Spanish names
+✅ **Do**: Alphabetize by English names in the index
 
 ---
 
@@ -382,12 +388,12 @@ After finishing all 4 steps:
 | File | Path |
 |------|------|
 | **Recipe source** | **Project Knowledge (images uploaded to project - use `project_knowledge_search` tool)** |
-| **Source images (reference)** | `/Users/michelle/Documents/recipes/Mastering Pasta/images/` (must be uploaded to Project Knowledge first) |
-| Inventory | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/recipe-inventory.md` |
-| Recipe HTMLs | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/Mastering Pasta/` |
-| Index file | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/mastering-pasta.html` |
-| This guide | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/recipe-creation-guide.md` |
-| Schema reference | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/recipe-schema.md` |
+| **Source images (reference)** | `/Users/michelle/Documents/recipes/The Essential Cuban Cookbook/images/` (must be uploaded to Project Knowledge first) |
+| Inventory | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/recipe-inventory.md` |
+| Recipe HTMLs | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/` |
+| Index file | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/essential-cuban-cookbook.html` |
+| This guide | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/recipe-creation-guide.md` |
+| Project definitions | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/project-definitions.md` |
 
 ---
 
@@ -400,7 +406,6 @@ After finishing all 4 steps:
 | `itemprop` on `<h2>` | Instructions don't import | Put `itemprop` on each `<li>` |
 | Trying to do too many recipes | Token limit causes crash | Do batches of ~5 recipes |
 | Skipping recipes | Inventory gets out of sync | Follow inventory order exactly |
-| Not creating variation files | Users can't find variations | Always create separate files |
 | Checking/verifying paths | Wastes time | Just use the specified paths |
 | Reading images from filesystem | Cannot view images this way | Use `project_knowledge_search` tool |
 
@@ -418,8 +423,8 @@ After finishing all 4 steps:
    - Read the images returned to extract recipe details (ingredients, instructions, descriptions)
    - Create HTML using `Filesystem:write_file` with proper schema
 4. Update inventory (mark all 5 complete, update stats)
-5. Update index (add all 5 links in alphabetical order)
-6. Say: "✅ Completed 5 recipes: [list them]. 31 recipes remaining. Ready to continue when you say 'continue'."
+5. Update index (add all 5 links in alphabetical order by English name)
+6. Say: "✅ Completed 5 recipes: [list them]. 47 recipes remaining. Ready to continue when you say 'continue'."
 
 **You wait** - Don't automatically start the next batch
 
@@ -437,8 +442,9 @@ After finishing all 4 steps:
 ### If search returns no results:
 1. Try different keywords or broader terms
 2. Try searching with just the page number
-3. Ask user to confirm the recipe name and page number
-4. As last resort, ask user to upload the specific page image to the chat
+3. Try both Spanish and English names
+4. Ask user to confirm the recipe name and page number
+5. As last resort, ask user to upload the specific page image to the chat
 
 ---
 
