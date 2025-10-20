@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincotto</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #8B4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .recipe-meta {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+        h2 {
+            color: #8B4513;
+            margin-top: 30px;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            padding-left: 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .note {
+            background-color: #f9f4ef;
+            padding: 15px;
+            border-left: 4px solid #8B4513;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <article itemscope itemtype="http://schema.org/Recipe">
+        <img itemprop="image" src="IMG_7689.JPG" alt="Mastering Pasta cookbook cover" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+        
+        <h1 itemprop="name">Vincotto</h1>
+        
+        <div class="recipe-meta">
+            <span itemprop="recipeYield">About 2 cups (473 ml)</span>
+        </div>
+
+        <div class="description" itemprop="description">
+            <p>Literally "cooked wine," this thick, sweet sauce is similar to balsamic syrup. It's easy to make and keeps well, but if you want to buy it, it's pretty widely available. Try it on vanilla ice cream!</p>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li itemprop="recipeIngredient">4 cups (946 ml) dry red wine</li>
+
+            <li itemprop="recipeIngredient">3 cups (600 g) sugar</li>
+
+            <li itemprop="recipeIngredient">10 black peppercorns</li>
+
+            <li itemprop="recipeIngredient">1 cinnamon stick, about 3 inches (7.5 cm) long</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li itemprop="recipeInstructions">Combine all of ingredients in a saucepan, place over high heat, and bring to a boil, stirring to dissolve the sugar. Turn down the heat to medium-high and vigorously simmer the mixture until it has reduced by about half and has thickened to the consistency of thin syrup, 35 to 40 minutes.</li>
+
+            <li itemprop="recipeInstructions">Strain the mixture through a fine-mesh sieve and use it within 1 hour, or transfer it to an airtight container and store in a cool cupboard for up to 1 month.</li>
+        </ol>
+
+        <div class="note">
+            <p><strong>Source:</strong> Recipe from <em>Mastering Pasta: The Art and Practice of Handmade Pasta, Gnocchi, and Risotto</em> by Marc Vetri with David Joachim</p>
+        </div>
+    </article>
+</body>
+</html>
