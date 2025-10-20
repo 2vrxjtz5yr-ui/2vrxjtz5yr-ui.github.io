@@ -1,12 +1,12 @@
 # Mastering Pasta - Recipe Inventory
 
-**Last updated:** October 19, 2025
+**Last updated:** October 20, 2025
 
 ## Progress Statistics
 - **Total recipes:** 118
-- **Completed:** 96
-- **Missing:** 22
-- **Progress:** 79%
+- **Completed:** 97
+- **Missing:** 21
+- **Progress:** 82%
 
 ---
 
@@ -152,7 +152,7 @@
 - [x] Crab and Sorrel Risotto (p.232)
 - [x] Bluefoot Mushroom Risotto with Castelmagno Cheese (p.233)
 - [x] Squid Ink Risotto with Seppia Salad and Ricotta (p.234)
-- [ ] Duck Risotto with Orange Sauce (p.236)
+- [x] Duck Risotto with Orange Sauce (p.236)
 
 ---
 
