@@ -349,6 +349,48 @@ After finishing all 4 steps:
 
 ---
 
+## QUALITY ASSURANCE VALIDATION
+
+**After completing ALL recipes in the project**, run the QA validator to ensure everything is correct:
+
+### QA Validator Script
+**Location:** `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/general/recipe-qa-validator.py`
+
+**How to run:**
+```bash
+cd /Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/general
+python3 recipe-qa-validator.py
+```
+
+The script will:
+1. Show all available recipe projects
+2. Ask which project to validate
+3. Run comprehensive checks on:
+   - Schema.org compliance (critical: itemprop on `<li>` tags)
+   - Inventory accuracy (checkboxes and statistics)
+   - Index completeness (all recipes linked, no broken links)
+   - File naming consistency (lowercase-with-hyphens)
+   - Cross-references (inventory ↔ HTML files ↔ index)
+   - Alphabetical ordering in index
+4. Generate a detailed report with errors and warnings
+
+**When to run:**
+- After completing all recipes in a cookbook project
+- Before deploying/publishing the recipe collection
+- When debugging issues with recipe imports
+- As a final verification step
+
+**The validator checks:**
+- ✅ All HTMLs follow required schema structure
+- ✅ Inventory statistics match actual completion
+- ✅ Every HTML file is linked in the index
+- ✅ Every index link points to an existing file
+- ✅ Filenames follow naming convention
+- ✅ Index is alphabetically ordered
+- ⚠️  Schema markup is on individual `<li>` tags (not parents)
+
+---
+
 ## IMPORTANT RULES
 
 1. **Do NOT skip ANY recipes** - Include all recipes from the inventory
@@ -396,6 +438,7 @@ After finishing all 4 steps:
 | Index file | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/essential-cuban-cookbook.html` |
 | This guide | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/recipe-creation-guide.md` |
 | Project definitions | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/The Essential Cuban Cookbook/project-definitions.md` |
+| **QA Validator** | `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/general/recipe-qa-validator.py` |
 
 ---
 

@@ -4,9 +4,9 @@
 
 ## Progress Statistics
 - **Total recipes:** 52
-- **Completed:** 30
-- **Missing:** 22
-- **Progress:** 19%
+- **Completed:** 52
+- **Missing:** 0
+- **Progress:** 100%
 
 ---
 
@@ -57,31 +57,31 @@
 
 ## Chapter Four - BEEF AND PORK
 
-- [ ] Albondigas / Cuban Meatballs (p.68)
-- [ ] Bistec de Palomilla / Pan-Fried Top Sirloin Steak (p.70)
-- [ ] Cuban Picadillo / Braised Ground Beef (p.71)
-- [ ] Rabo Encendido / Braised Oxtail (p.73)
-- [ ] Ropa Vieja / Braised Shredded Beef (p.75)
-- [ ] Vaca Frita / Crispy Beef (p.78)
-- [ ] Chuletas de Puerco / Pork Chops (p.80)
-- [ ] Lechon Asado / Roast Pork (p.82)
-- [ ] Masitas de Puerco Fritas / Fried Pork Chunks (p.84)
-- [ ] Lacon Asado al Horno / Oven-Roasted Ham Hocks (p.85)
+- [x] Albondigas / Cuban Meatballs (p.68)
+- [x] Bistec de Palomilla / Pan-Fried Top Sirloin Steak (p.70)
+- [x] Cuban Picadillo / Braised Ground Beef (p.71)
+- [x] Rabo Encendido / Braised Oxtail (p.73)
+- [x] Ropa Vieja / Braised Shredded Beef (p.75)
+- [x] Vaca Frita / Crispy Beef (p.78)
+- [x] Chuletas de Puerco / Pork Chops (p.80)
+- [x] Lechon Asado / Roast Pork (p.82)
+- [x] Masitas de Puerco Fritas / Fried Pork Chunks (p.84)
+- [x] Lacon Asado al Horno / Oven-Roasted Ham Hocks (p.85)
 
 ---
 
 ## Chapter Five - DESSERTS AND DRINKS
 
-- [ ] Buñuelos de Yuca y Malanga / Yucca and Malanga Fritters (p.90)
-- [ ] Flan de Queso / Cream Cheese Flan (p.92)
-- [ ] Natilla / Cinnamon Custard (p.94)
-- [ ] Pudin de Pan con Guayaba / Guava Bread Pudding (p.96)
-- [ ] Tia Ofe's Arroz con Leche / Rice Pudding (p.97)
-- [ ] Classic Daiquiri (p.98)
-- [ ] Crema de Vie / Cuban Eggnog (p.99)
-- [ ] Cuba Libre / Rum and Coke with Lime (p.100)
-- [ ] El Presidente / The President (p.101)
-- [ ] Mojito (p.102)
+- [x] Buñuelos de Yuca y Malanga / Yucca and Malanga Fritters (p.90)
+- [x] Flan de Queso / Cream Cheese Flan (p.92)
+- [x] Natilla / Cinnamon Custard (p.94)
+- [x] Pudin de Pan con Guayaba / Guava Bread Pudding (p.96)
+- [x] Tia Ofe's Arroz con Leche / Rice Pudding (p.97)
+- [x] Classic Daiquiri (p.98)
+- [x] Crema de Vie / Cuban Eggnog (p.99)
+- [x] Cuba Libre / Rum and Coke with Lime (p.100)
+- [x] El Presidente / The President (p.101)
+- [x] Mojito (p.102)
 
 ---
 

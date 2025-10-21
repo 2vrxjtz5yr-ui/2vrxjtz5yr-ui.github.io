@@ -20,6 +20,8 @@
 
 9. **The Guide** / **Guide File** = `recipe-creation-guide.md` (located in the recipe folder) - the complete guide for creating recipe HTMLs
 
+10. **QA Validator Script** = `recipe-qa-validator.py` (located in `/Users/michelle/Documents/GitHub/2vrxjtz5yr-ui.github.io/general/`) - Python script for validating completed recipe projects
+
 ---
 
 ## Reference Project (Mastering Pasta)
@@ -32,3 +34,4 @@
 ---
 
 *Created: October 20, 2025*
+*Updated: October 21, 2025 - Added QA Validator Script*
