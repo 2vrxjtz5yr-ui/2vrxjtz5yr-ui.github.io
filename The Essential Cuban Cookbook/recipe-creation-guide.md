@@ -204,11 +204,13 @@ Use the `project_knowledge_search` tool to find the recipe:
 
         <div class="description" itemprop="description">
             <p>[Recipe description from cookbook]</p>
-        </div>
-
-        <!-- OPTIONAL: Only include if there's a variation, ingredient, or technique tip -->
-        <div class="note">
-            <strong>Variation Tip:</strong> [Tip text if applicable]
+            
+            <!-- CRITICAL: Include ALL tips (Variation/Ingredient/Technique) as paragraphs within the description section -->
+            <p><strong>Ingredient Tip:</strong> [Tip text if applicable]</p>
+            
+            <p><strong>Technique Tip:</strong> [Tip text if applicable]</p>
+            
+            <p><strong>Variation Tip:</strong> [Tip text if applicable]</p>
         </div>
 
         <h2>Ingredients</h2>
